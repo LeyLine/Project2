@@ -1,0 +1,12 @@
+<h2> My Events </h2>
+
+<ul>
+  <% eventsAndStuff.forEach((oneEvent) => { %>
+    <li>
+      <h3> <%= oneEvent.name %> </h3>
+      <img src="<%= oneEvent.photoUrl %>">
+      <p> Owner: <i> <%= oneEvent.owner %> </i> </p>
+
+    </li>
+  <% }) %>
+</ul>
