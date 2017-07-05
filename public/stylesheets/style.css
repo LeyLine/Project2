@@ -1,8 +1,78 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height:100%;
+  width:100%;
 }
 
-a {
-  color: #00B7FF;
+
+.sidebar {
+  width: 316px;
+  font-family: 'Slabo 27px', serif;
+  color:grey;
+  height:111%;
+  position: fixed;
+}
+
+
+.title {
+  font-size: 375%;
+}
+
+.top {
+  list-style-type: none;
+   background-color: #f1f1f1;
+  text-decoration: none;
+  font-family: 'Slabo 27px', serif;
+  color:grey;
+  font-size: 164%;
+  height:64%;
+  padding-top: 40px;
+  width:229px;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 15px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.horizontal {
+
+      display: block;
+      color: #000;
+      padding: 15px 16px;
+      text-decoration: none;
+      padding-top: 10px;
+      font-size: 38px;
+      right: 20px;
+    }
+
+.horizontal a:hover {
+      background-color: #555;
+      color: white;
+}
+
+.social {
+  list-style-type: none;
+   background-color: #f1f1f1;
+  text-decoration: none;
+  font-family: 'Slabo 27px', serif;
+  color:grey;
+  font-size: 164%;
+  height:64%;
+  padding-top: 40px;
+}
+
+.stuff {
+  position: absolute;
+top:8%;
+left:42%;
+background-color: red;
+height:300%;
+width:50%;
 }

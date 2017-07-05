@@ -31,11 +31,36 @@ router.get('/events/new', (req, res, next) => {
 
 router.post('/events', (req, res, next) => {
     const theEvent = new EventModel({
-      name: req.body.eventName,
-      description: req.body.eventDescription,  //what i need help with
-      location: req.body.eventLocation,
-      ownerName: req.user.username,
-    });
+
+
+      name:           req.body.eventName,
+
+      owner:          req.user._id,
+
+      description:
+                    { photoUrl: req.body.eventPhotoUrl,
+
+                      details: req.body.eventDescription
+                    },
+      location:
+                    { photoUrl: req.body.LPhotoUrl,
+
+                      city: req.body.eventCity,
+
+                      address: req.body.eventAddress,
+                    },
+
+      });
+
+
+    theEvent.save((err) => {
+          if (err) {
+            next(err);
+            return;
+          }
+
+          res.redirect('/my-events');
+      });
 
 
 });
@@ -58,7 +83,7 @@ router.get('/my-events', (req, res, next) => {
     }
 
     EventModel.find(
-        // find the rooms owned by the logged in user
+
       { owner: req.user._id },
 
       (err, eventResults) => {
@@ -66,8 +91,15 @@ router.get('/my-events', (req, res, next) => {
             next(err);
             return;
           }
-
+          console.log("Im here!" + eventResults);
           res.locals.eventsAndStuff = eventResults;
+
+          const ownerId = eventResults[0].owner;
+          //Require User model
+          //Find user by ID
+          //Save user as local variable
+
+
 
           res.render('event-views/event-list-view.ejs');
       }

@@ -4,9 +4,7 @@
   <% eventsAndStuff.forEach((oneEvent) => { %>
     <li>
       <h3> <%= oneEvent.name %> </h3>
-      <img src="<%= oneEvent.photoUrl %>">
-      <p> Owner: <i> <%= oneEvent.owner %> </i> </p>
-
+      <p> Owner: <p> <%= oneEvent.owner %> </p> </p>
     </li>
   <% }) %>
 </ul>

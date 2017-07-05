@@ -19,11 +19,12 @@ const myEventSchema = new Schema(
                    details: { type: String },
                  },
 
-    location:    { city: { type: String },
-                   street: { type: String }
+    location:    { photoUrl: { type: String },
+                   city: { type: String },
+                   address: { type: String }
                  },
 // the id of the user who owns the room
-    owner:       { type: String
+    owner:       { type: Schema.Types.ObjectId
                  },
   },
      {
