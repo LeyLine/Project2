@@ -7,14 +7,14 @@ body {
 .sidebar {
   width: 316px;
   font-family: 'Slabo 27px', serif;
-  color:grey;
+  color:black;
   height:111%;
   position: fixed;
 }
 
 
 .title {
-  font-size: 375%;
+  font-size: 323%;
 }
 
 .top {
@@ -24,8 +24,8 @@ body {
   font-family: 'Slabo 27px', serif;
   color:grey;
   font-size: 164%;
-  height:64%;
-  padding-top: 40px;
+  height:71%;
+  padding-top: 10px;
   width:229px;
 }
 
@@ -45,11 +45,10 @@ li a {
 
       display: block;
       color: #000;
-      padding: 15px 16px;
       text-decoration: none;
-      padding-top: 10px;
-      font-size: 38px;
+      font-size: 28px;
       right: 20px;
+      width:150px;
     }
 
 .horizontal a:hover {
@@ -70,9 +69,95 @@ li a {
 
 .stuff {
   position: absolute;
-top:8%;
-left:42%;
-background-color: red;
+top:-2%;
+left:277px;
 height:300%;
-width:50%;
+width:1000px;
+}
+
+.live {
+  width:998px;
+  height:566px;
+  left:100px;
+
+}
+
+.textover {
+font-family: 'Ropa Sans', sans-serif;
+font-size: 73px;
+position: relative;
+top:-561px;
+left:30px;
+color:white;
+font-weight: bold;
+width:46%;
+text-shadow: 2px 2px black;
+}
+
+.nextshow {
+  background-color: green;
+  width:998px;
+  height: 152px;
+  left:277px;
+  top:550px;
+  position: absolute;
+}
+
+.nshow {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 62px;
+    overflow: hidden;
+    background-color: #333;
+    height:107px;
+    width:958px;
+}
+
+.nshow li {
+    float: left;
+}
+
+.nshow li p {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Slabo 27px', serif;
+}
+
+.info {
+  position: relative;
+  left:545px;
+}
+
+.time {
+  position: relative;
+  left:352px;
+}
+
+.date {
+  position: relative;
+  left:152px;
+}
+
+.what {
+  position: relative;
+  top:-58px;
+  color:red;
+  font-size: 21px;
+  left:-35px;
+  text-shadow: 2px 2px black;
+}
+
+.musicp   {
+  position: relative;
+  top:-165px;
+  color:white;
+  font-size: 32px;
+  border-right: 1px solid white;
+  height: 105px;
+  padding-top: 88px;
+  width: 228px;
+  left:-34px;
+  text-shadow: 2px 2px black;
+
 }
