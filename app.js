@@ -13,6 +13,8 @@ const passport = require('passport');
 const dotenv = require("dotenv").config();
 mongoose.connect(process.env.MONGODB_URI);
 
+require('./config/passport-config.js');
+
 const app = express();
 
 // view engine setup
