@@ -9,8 +9,8 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const passport = require('passport');
 
-require('./config/passport-config.js');
-require("dotenv").config();
+
+const dotenv = require("dotenv").config();
 mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
