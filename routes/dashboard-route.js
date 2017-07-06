@@ -16,10 +16,17 @@ router.get('/dashboard', (req, res, next) => {
           return;
         }
         if (req.user) {
+          console.log('')
+          console.log('LOGGED IN 🐳🐳🐳🐳🐳🐳🐳🐳🐳 ----------------------')
+          console.log('')
           res.locals.eventsAndStuff = eventResults;
           res.render('dash-view/dashboard-view.ejs');
           return;
         }
+
+        console.log('')
+        console.log('GETT OUTTA HERE 🐳🐳🐳🐳🐳🐳🐳🐳🐳 ----------------------')
+        console.log('')
 
       res.redirect('/');
 

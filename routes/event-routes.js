@@ -12,7 +12,7 @@ const router = express.Router();
 
 
 
-router.get('/events/new', (req, res, next) => {
+router.get('/events', (req, res, next) => {
     if (req.user) {
       res.render('event-views/new-event-view.ejs');
     }
