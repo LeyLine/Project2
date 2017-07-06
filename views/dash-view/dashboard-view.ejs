@@ -1,6 +1,7 @@
-<h2 class="myetitle"> My Events </h2>
+<h1 class="eventtitle">All EVENTS</h1>
 
-<ul class="myevents">
+
+<ul class="eventlist">
   <% eventsAndStuff.forEach((oneEvent) => { %>
     <li>
       <h3> <%= oneEvent.name %> </h3>
@@ -12,5 +13,4 @@
       <p> location: <p> <%= oneEvent.description.address %> </p> </p>
 
     </li>
-  <% }) %>
-</ul>
+  <%}); %>

@@ -70,6 +70,9 @@ app.use('/', myAuthRoutes);
 const myEventRoutes = require('./routes/event-routes.js');
 app.use('/', myEventRoutes);
 
+const myDashboard = require('./routes/dashboard-route.js');
+app.use('/', myDashboard);
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');

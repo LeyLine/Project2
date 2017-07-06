@@ -81,7 +81,8 @@ const passport = require('passport');
 router.get('/login', (req, res, next) => {
   // Redirect to home you are already logged in.
   if (req.user) {
-    res.redirect('/');
+    res.redirect('/dashboard');
+    return;
   }
 
   // If not logged in, show the log in page.
@@ -95,7 +96,7 @@ router.post('/login',
     'local', // 1st argument -> name of the strategy
     //                 (determined by the strategy's npm package)
     { // 2nd argument -> settings object
-      successRedirect: '/', // "successRedirect" (where to go if login worked)
+      successRedirect: '/dashboard', // "successRedirect" (where to go if login worked)
       failureRedirect: '/login' // "failureRedirect" (where to go if login failed)
     }
   )
@@ -108,7 +109,7 @@ router.post('/login',
 router.get('/logout', (req, res, next) => {
   // the "req.logout()" function is defined by the passport middleware (app.js)
   req.logout();
-  res.redirect('/login');
+  res.redirect('/');
 });
 
 module.exports = router;
