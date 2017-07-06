@@ -10,8 +10,8 @@ const session = require('express-session');
 const passport = require('passport');
 
 require('./config/passport-config.js');
-
-mongoose.connect('mongodb://localhost/project2');
+require("dotenv").config();
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
