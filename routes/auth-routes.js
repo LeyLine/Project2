@@ -97,7 +97,7 @@ router.post('/login',
     //                 (determined by the strategy's npm package)
     { // 2nd argument -> settings object
       successRedirect: '/dashboard', // "successRedirect" (where to go if login worked)
-      failureRedirect: '/login' // "failureRedirect" (where to go if login failed)
+      failureRedirect: '/' // "failureRedirect" (where to go if login failed)
     }
   )
 );

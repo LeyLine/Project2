@@ -17,6 +17,8 @@ body {
 
 .title {
   font-size: 323%;
+position: absolute;
+left: 23px;
 }
 
 .top {
@@ -25,10 +27,12 @@ body {
   text-decoration: none;
   font-family: 'Slabo 27px', serif;
   color:grey;
-  font-size: 164%;
-  height:71%;
+  font-size: 196%;
+  height:79%;
   padding-top: 10px;
-  width:229px;
+  width:276px;
+  position: absolute;
+  top:81px;
 }
 
 
@@ -51,7 +55,7 @@ li a {
       display: block;
       color: #000;
       text-decoration: none;
-      font-size: 28px;
+      font-size: 43px;
       right: 20px;
       width:150px;
     }
@@ -70,12 +74,11 @@ li a {
    background-color: #f1f1f1;
   text-decoration: none;
   font-family: 'Slabo 27px', serif;
-  color:grey;
+  color:red;
   font-size: 164%;
   height:64%;
   padding-top: 40px;
 }
-
 
 
 .stuff {
@@ -111,9 +114,9 @@ text-shadow: 2px 2px black;
 .nshow {
     list-style-type: none;
     margin: 0;
-    background-color: #333;
+    background-color: #000000;
     height:139px;
-    width:958px;
+    width:998px;
     position: absolute;
     top:564px;
 
@@ -217,7 +220,7 @@ text-shadow: 2px 2px black;
   text-shadow: 2px 2px black;
 height: 44px;
     width:184px;
-    background-color: red;
+    background-color: #C21A18;
     border: none;
     color: white;
 
@@ -235,7 +238,7 @@ height: 44px;
   text-shadow: 2px 2px black;
 height: 44px;
     width:184px;
-    background-color: red;
+    background-color: #C21A18;
     border: none;
     color: white;
     text-align: center;
@@ -244,10 +247,23 @@ height: 44px;
     cursor: pointer;
 }
 
+
 .summ {
   position: absolute;
   top:842px;
   left:279px;
+  font-family: 'Slabo 27px', serif;
+  font-size: 30px;
+  color:#C21A18
+}
+
+.summajor {
+  font-size: 23px;
+  font-family: 'Slabo 27px', serif;
+  position: absolute;
+  left:273px;
+  width: 400px;
+
 }
 
 
@@ -354,6 +370,7 @@ height: 44px;
   position: absolute;
   left: 593px;
   top:100px;
+  width:100px;
 }
 
 .eventtitle {

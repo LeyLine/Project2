@@ -94,7 +94,7 @@ router.get('/my-events', (req, res, next) => {
           console.log("Im here!" + eventResults);
           res.locals.eventsAndStuff = eventResults;
 
-          const ownerId = eventResults[0].owner;
+          // const ownerId = eventResults[0].owner;
           //Require User model
           //Find user by ID
           //Save user as local variable
