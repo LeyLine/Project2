@@ -21,7 +21,7 @@
     <li>  <a href="/dashboard">home</a></li>
     <li>  <a href="#" data-toggle="modal" data-target="#signup-modal"> sign up </a></li>
     <li>  <a href="/my-events"> my events </a></li>
-    <li>      <a href="/events/new"> new event </a></li>
+    <li> <a href="#" data-toggle="modal" data-target="#newevent-modal"> new event</a> </li>
    <li> <a href="#" data-toggle="modal" data-target="#login-modal">login</a> </li>
     <li>  <a href="/"> log out </a></li>
 
@@ -39,12 +39,12 @@
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	  <div class="modal-dialog">
 				<div class="loginmodal-container">
-					<h1>Login to Your Account</h1><br>
+					<h1>login to your Account.</h1><br>
 				  <form id="form" method="post" action="/login">
-            <label for="username-input"> Username </label>
+            <label class="uselabel" for="username-input"> userName </label>
             <input id="username-input" type="text" name="loginUsername">
             <br>
-            <label for="password-input"> Password </label>
+            <label class="usepass" for="password-input"> password </label>
             <input id="password-input" type="password" name="loginPassword">
             <br>
               <button> Log In </button>
@@ -60,15 +60,15 @@
       <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
           	  <div class="modal-dialog">
       				<div class="loginmodal-container">
-      					<h1>Create a Free Account</h1><br>
+      					<h1>Create a Free Account.</h1><br>
       				  <form id="form" method="post" action="/signup">
-                  <label for="full-name-input"> Name  </label>
+                  <label class='uselabel'for="full-name-input"> name  </label>
                   <input id="full-name-input" type="text" name="signupFullName">
                   <br>
-                  <label for="username-input"> Username </label>
+                  <label class='uselabel'for="username-input"> userName </label>
                   <input id="username-input" type="text" name="signupUsername">
                   <br>
-                  <label for="password-input"> Create Password </label>
+                  <label  class="uselabel" for="password-input"> createPassword </label>
                   <input id="password-input" type="password" name="signupPassword">
                   <br>
                     <button> Sign In </button>
@@ -79,6 +79,36 @@
       			</div>
       		  </div>
 
+            <div class="modal fade" id="newevent-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                    <div class="loginmodal-container">
+                      <h1>create an Event.</h1><br>
+                      <form id="form" method="post" action="/events">
+                        <label class='uselabel'for="event-name-input"> event Name  </label>
+                        <input id="event-name-input" type="text" name="eventName">
+                        <br>
+                        <label class='uselabel' for="event-photo-url"> event Photo </label>
+                        <input id="event-photo-url" type="url" name="event-photo-url">
+                        <br>
+                        <label  class="uselabel" for="event-description-input"> description </label>
+                        <input id="event-description-input" type="text" name="eventDescription">
+                        <!-- <br>
+                        <br>
+                        <label  class="uselabel" for="event-description-input"> description </label>
+                        <input id="event-description-input" type="text" name="eventDescription"> -->
+                        <br>
+                        <br>
+                        <label  class="uselabel" for="event-address-input"> Address </label>
+                        <input id="event-address-input"  type="text" name="eventAddress">
+                        <br>
+
+                          <button> create Event </button>
+                      </form>
+
+
+                    </div>
+                  </div>
+                  </div>
 
 
 
@@ -89,7 +119,7 @@
 </script>
 <script src="javascripts/bootstrap.min.js"></script>
 <script type="text/javascript"></script>
-
+<script src="javascripts/testy.js"></script>
 </body>
 
 </html>

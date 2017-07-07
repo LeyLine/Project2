@@ -3,22 +3,23 @@
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
 
+<div class="eventbrick">
 
-
+<div class="cont">
 <h1 class="eventtitle">All EVENTS</h1>
 
 
-<ul class="eventlist">
+<ul>
   <% eventsAndStuff.forEach((oneEvent) => { %>
-    <li>
+    <li class="eventlist">
       <h3> <%= oneEvent.name %> </h3>
-      <p> Owner: <p> <%= oneEvent.owner %> </p> </p>
-      <p> Photo: <p> <%= oneEvent.description.photoUrl %> </p> </p>
-      <p> Description: <p> <%= oneEvent.description.details %> </p> </p>
-      <p> location: <p> <%= oneEvent.description.photoUrl %> </p> </p>
-      <p> location: <p> <%= oneEvent.description.city %> </p> </p>
-      <p> location: <p> <%= oneEvent.description.address %> </p> </p>
+      <!-- <p> Photo: <p> <%= oneEvent.description.photoUrl %> </p> </p> -->
+      <p> Description: <%= oneEvent.description.details %>  </p>
+      <!-- <p> location: <p> <%= oneEvent.location.photoUrl %> </p> </p> -->
+      <p> city: <%= oneEvent.location.city %>  </p>
+      <p> address: <%= oneEvent.location.address %>  </p>
 
     </li>
   <%}); %>
-  
+</div>
+</div>

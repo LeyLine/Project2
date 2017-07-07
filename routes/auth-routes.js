@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/signup', (req, res, next) => {
   // Redirect to home you are already logged in.
   if (req.user) {
-    res.redirect('/');
+    res.redirect('/dashboard');
   }
 
   // If not logged in, show the sign up page.
@@ -47,7 +47,7 @@ router.post('/signup', (req, res, next) => {
         // If that's the case, display an error to the user.
         res.locals.messageForDumbUsers = 'Sorry but that username is taken.';
 
-        res.render('auth-views/signup-view.ejs');
+        res.render('/');
         return;
       }
 

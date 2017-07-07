@@ -59,7 +59,7 @@ router.post('/events', (req, res, next) => {
             return;
           }
 
-          res.redirect('/my-events');
+          res.redirect('/my-event');
       });
 
 
@@ -77,8 +77,9 @@ router.post('/events', (req, res, next) => {
 
 
 router.get('/my-events', (req, res, next) => {
+  console.log('got here');
     if (req.user === undefined) {
-      res.redirect('/login');
+      res.redirect('/');
       return;
     }
 
@@ -91,14 +92,10 @@ router.get('/my-events', (req, res, next) => {
             next(err);
             return;
           }
-          console.log("Im here!" + eventResults);
           res.locals.eventsAndStuff = eventResults;
 
-          // const ownerId = eventResults[0].owner;
-          //Require User model
-          //Find user by ID
-          //Save user as local variable
 
+          // console.log("Im here" + eventsAndStuff[0].description.photoUrl);
 
 
           res.render('event-views/event-list-view.ejs');
