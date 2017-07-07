@@ -59,7 +59,7 @@ router.post('/events', (req, res, next) => {
             return;
           }
 
-          res.redirect('/my-event');
+          res.redirect('/my-events');
       });
 
 
